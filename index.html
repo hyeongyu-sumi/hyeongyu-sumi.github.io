@@ -210,7 +210,8 @@
                             var mapContainer = document.getElementById('kakaomap'),
                                 mapOption = {
                                     center: new kakao.maps.LatLng(35.2261534, 128.8850832),
-                                    level: 3
+                                    level: 3,
+                                    disableDoubleClickZoom: true
                                 };
                             var map = new kakao.maps.Map(mapContainer, mapOption);
                             var marker = new kakao.maps.Marker({
@@ -219,7 +220,6 @@
                             });
                             map.setZoomable(false);
                             map.setDraggable(false);
-                            map.setDoubleClickZoom(false);
                         </script>
                         <div data-aos="fade-up" style="font-size:14px;font-weight:bold;padding-top:20px;padding-bottom:20px;display:flex;align-items:center;justify-content:center"
                              class="aos-init aos-animate">
