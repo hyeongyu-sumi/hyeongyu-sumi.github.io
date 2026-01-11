@@ -10,10 +10,10 @@
     <meta property="og:type" content="article" />
     <meta property="og:image:width" content="800" />
     <meta property="og:image:height" content="1200" />
-    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height" />
+    <meta name="viewport" content="width=480, initial-scale=1" />
 
 
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="width=480, initial-scale=1.0" name="viewport">
     <link rel="stylesheet" href="./resources/snow.css">
     <link rel="stylesheet" href="./resources/font.css">
     <link rel="icon" href="./images/favicon.jpeg">
@@ -60,7 +60,12 @@
             font-weight: 700;
             font-display: swap;
         }
-        * { font-family: 'CulturalHeritageCare', sans-serif !important; }
+        * { font-family: 'CulturalHeritageCare', sans-serif !important; box-sizing: border-box; }
+        html { background: #f5f5f5; }
+        body { max-width: 480px; margin: 0 auto; background: #fff; overflow-x: hidden; }
+        .container, section { max-width: 100% !important; }
+        .slider-for2 img { width: 100%; height: auto; }
+        .slider-wrap2 { width: 100% !important; margin-left: 0 !important; padding: 0 15px; }
     </style>
     <link rel="stylesheet skin" href="./resources/coral.css" type="text/css">
     <link href="./resources/jquery-sakura.css" rel="stylesheet" type="text/css">
@@ -118,15 +123,9 @@
             <div class="slide-title align-middle">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-offset-3 col-md-6 animation delay1 fadeInUp animated" style="visibility: visible;text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);">
-                            <div class="banner-text withlove medium light" style="margin-top: 300px;">
-                                <h1 class="_font-main" style="font-size: 35px">김현규 & 김수미</h1>
-                            </div>
-                            <div id="banner-date" style="font-size: 18px">
-                                2026년 3월 15일 일요일 낮 12시<br>
-                                김해 더파티 웨딩홀
-                            </div>
-
+                        <div style="position: absolute; right: 30px; bottom: 30px; color: #000; font-size: 18px; display: flex; align-items: flex-start;">
+                            <div style="writing-mode: vertical-rl; margin-right: 15px;">김현규・김수미</div>
+                            <div style="writing-mode: vertical-rl;">결혼합니다</div>
                         </div>
                     </div>
                 </div>
@@ -262,7 +261,7 @@
             </div>
 
             <div class="row">
-                <div class="slider-wrap2 col-md-offset-3 col-md-6 text-center" style="margin-bottom: 100px;">
+                <div class="slider-wrap2 col-md-offset-3 col-md-6 text-center" style="margin-bottom: 30px;">
                     <div class="slider-for2">
                         <div class="photo-item"><img src="./images/snt/gallery/2/1.jpg" alt=""></div>
                         <div class="photo-item"><img src="./images/snt/gallery/2/2.jpg" alt=""></div>
@@ -313,20 +312,14 @@
                 <div class="row">
                     <div class="col-md-offset-2 col-md-8 text-center">
                         <div class="text-center animation fadeInUp animated" style="visibility: visible;font-family: 'MapoFlowerIsland'">
-                            <h4 style="font-family: 'MapoFlowerIsland';font-size: 20px">마음 전하실 곳</h4><br><br><br><br>
+                            <h4 style="font-family: 'MapoFlowerIsland';font-size: 20px">마음 전하실 곳</h4>
 
                         </div>
-                        <div class="banner-text withlove large light animation fadeInUp animated" style="visibility: visible;">
-                            <h2 class="h4">신랑측</h2>
+                        <div class="banner-text withlove large light animation fadeInUp animated" style="visibility: visible;margin-top: 80px;">
                             <p style="margin-bottom: 10px;">신한 111-222-3333333 김현규
-                                <br>
                                 <img src="./images/copy_btn.png" style="width: 60px;cursor: pointer;border-radius: 4px;" onclick="copy_to_clipboard(110418488530);">
                             </p>
-                        </div>
-                        <div class="banner-text withlove large light animation fadeInUp animated" style="visibility: visible;">
-                            <h2 class="h4">신부측</h2>
                             <p style="margin-bottom: 10px;">신한 111-222-3333333 김수미
-                                <br>
                                 <img src="./images/copy_btn.png" style="width: 60px;cursor: pointer;border-radius: 4px;" onclick="copy_to_clipboard(110470516750);">
                             </p>
                         </div>
