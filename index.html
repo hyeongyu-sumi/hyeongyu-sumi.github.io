@@ -108,13 +108,13 @@
 <!-- MAIN SLIDER -->
 <section id="main-slider" class="flexslider" style="position: relative;">
     <!-- MAIN SLIDER TITLE OUTTER WRAPPER -->
-    <div id="banner-date" style="position: absolute; bottom: 10%; left: 50%; transform: translateX(-50%); z-index: 10; text-align: center; color: black; font-size: 18px; font-weight: bold; text-shadow: rgb(164 156 156 / 37%) 1px 1px; width: 90%;">
+    <div id="banner-date" style="position: absolute; left: 50%; transform: translateX(-50%); z-index: 10; text-align: center; color: black; font-size: 18px; font-weight: bold; text-shadow: rgb(164 156 156 / 37%) 1px 1px; width: 90%;">
         2026년 3월 15일 일요일 오후 12시<br>
         김해더파티 웨딩홀
     </div>
 
     <!-- MAIN SLIDER IMAGES -->
-    <img src="./images/snt/top.jpg" style="width: 100%; height: auto; display: block;">
+    <img id="top-img" src="./images/snt/top.jpg" style="width: 100%; height: auto; display: block;">
 </section><!-- ENF of MAIN SLIDER -->
 
 
@@ -418,5 +418,13 @@ line-height: 22px;
     <div class="copyright" style="padding-top: 20px;padding-bottom: 20px;">Copyright 2026. <a href="https://taetaetae.github.io/" style="text-decoration: underline;font-size: 12px" target="_blank">taetaetae</a>. All rights reserved.</div>
 </div>
 <script>
+var img = document.getElementById('top-img');
+var banner = document.getElementById('banner-date');
+function setPosition() {
+  banner.style.top = (img.offsetHeight * 0.85) + 'px';
+}
+img.onload = setPosition;
+setPosition();
+</script>
 </body>
 </html>
