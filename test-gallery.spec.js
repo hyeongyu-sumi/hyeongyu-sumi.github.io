@@ -8,10 +8,10 @@ test.describe('갤러리 이미지 검증', () => {
     await page.goto(BASE_URL);
     
     const images = await page.locator('.slider-for2 .photo-item:not(.slick-cloned) img').all();
-    expect(images.length).toBe(19);
+    expect(images.length).toBe(18);
     
     const thumbs = await page.locator('.slider-nav2 .photo-item:not(.slick-cloned)').all();
-    expect(thumbs.length).toBe(19);
+    expect(thumbs.length).toBe(18);
     
     await expect(page.locator('.slider-for2 .photo-item img').first()).toBeVisible();
   });
@@ -21,10 +21,10 @@ test.describe('갤러리 이미지 검증', () => {
     await page.goto(BASE_URL);
     
     const images = await page.locator('.slider-for2 .photo-item:not(.slick-cloned) img').all();
-    expect(images.length).toBe(19);
+    expect(images.length).toBe(18);
     
     const thumbs = await page.locator('.slider-nav2 .photo-item:not(.slick-cloned)').all();
-    expect(thumbs.length).toBe(19);
+    expect(thumbs.length).toBe(18);
     
     await expect(page.locator('.slider-for2 .photo-item img').first()).toBeVisible();
   });
