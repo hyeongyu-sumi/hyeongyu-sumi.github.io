@@ -431,14 +431,27 @@ function setViewportHeight() {
 
 var img = document.getElementById('top-img');
 var banner = document.getElementById('banner-date');
+
 function setPosition() {
-  banner.style.top = (img.offsetHeight * 0.85) + 'px';
+  // 이미지 하단에서 20px 위에 고정
+  const imgRect = img.getBoundingClientRect();
+  const sliderRect = document.getElementById('main-slider').getBoundingClientRect();
+  const bottomOffset = sliderRect.height - imgRect.height;
+  banner.style.bottom = (20 + bottomOffset) + 'px';
+  banner.style.top = 'auto';
   banner.style.opacity = '1';
 }
 
 setViewportHeight();
-window.addEventListener('resize', setViewportHeight);
-window.addEventListener('orientationchange', setViewportHeight);
+window.addEventListener('resize', () => {
+  setViewportHeight();
+  setPosition();
+});
+window.addEventListener('scroll', setPosition);
+window.addEventListener('orientationchange', () => {
+  setViewportHeight();
+  setTimeout(setPosition, 100);
+});
 
 img.onload = setPosition;
 if (img.complete) setPosition();
