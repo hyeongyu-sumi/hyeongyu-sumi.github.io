@@ -106,7 +106,7 @@
 
 
 <!-- MAIN SLIDER -->
-<section id="main-slider" class="flexslider" style="position: relative; height: 100vh; overflow: hidden; display: flex; align-items: flex-end;">
+<section id="main-slider" class="flexslider" style="position: relative; overflow: hidden; display: flex; align-items: flex-end;">
     <div style="position: relative; width: 100%; height: 100%;">
         <!-- MAIN SLIDER IMAGES -->
         <img id="top-img" src="./images/snt/top.jpg" style="width: 100%; height: 100%; object-fit: cover; object-position: center bottom; display: block;">
@@ -419,12 +419,27 @@ line-height: 22px;
     <div class="copyright" style="padding-top: 20px;padding-bottom: 20px;">Copyright 2026. <a href="https://taetaetae.github.io/" style="text-decoration: underline;font-size: 12px" target="_blank">taetaetae</a>. All rights reserved.</div>
 </div>
 <script>
+function setViewportHeight() {
+  const vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
+  
+  const slider = document.getElementById('main-slider');
+  if (slider) {
+    slider.style.height = `${window.innerHeight}px`;
+  }
+}
+
 var img = document.getElementById('top-img');
 var banner = document.getElementById('banner-date');
 function setPosition() {
   banner.style.top = (img.offsetHeight * 0.85) + 'px';
   banner.style.opacity = '1';
 }
+
+setViewportHeight();
+window.addEventListener('resize', setViewportHeight);
+window.addEventListener('orientationchange', setViewportHeight);
+
 img.onload = setPosition;
 if (img.complete) setPosition();
 </script>
