@@ -111,7 +111,7 @@
         <!-- MAIN SLIDER IMAGES -->
         <img id="top-img" src="./images/snt/top.jpg" style="width: 100%; height: 100%; object-fit: cover; object-position: center bottom; display: block;">
         <!-- MAIN SLIDER TITLE OUTTER WRAPPER -->
-        <div id="banner-date" style="position: absolute; left: 50%; bottom: 30px; transform: translateX(-50%); z-index: 10; text-align: center; color: black; font-size: 18px; font-weight: bold; width: 90%;letter-spacing:0px; opacity: 0; transition: opacity 0.3s;">
+        <div id="banner-date" style="position: absolute; left: 50%; bottom: 40px; transform: translateX(-50%); z-index: 10; text-align: center; color: black; font-size: 18px; font-weight: bold; width: 90%;letter-spacing:0px; opacity: 0; transition: opacity 0.3s;">
             2026년 3월 15일 일요일 오후 12시<br>
             W웨딩 김해더파티 웨딩홀 4층 벨리스홀
         </div>
@@ -433,11 +433,11 @@ var img = document.getElementById('top-img');
 var banner = document.getElementById('banner-date');
 
 function setPosition() {
-  // 이미지 하단에서 30px 위에 고정
+  // 이미지 하단에서 40px 위에 고정
   const imgRect = img.getBoundingClientRect();
   const sliderRect = document.getElementById('main-slider').getBoundingClientRect();
   const bottomOffset = sliderRect.height - imgRect.height;
-  banner.style.bottom = (30 + bottomOffset) + 'px';
+  banner.style.bottom = (40 + bottomOffset) + 'px';
   banner.style.top = 'auto';
   banner.style.opacity = '1';
 }
