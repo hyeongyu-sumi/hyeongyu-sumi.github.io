@@ -35,8 +35,8 @@ test.describe('신랑/신부 영역 검증', () => {
     await page.setViewportSize({ width: 1920, height: 1080 });
     await page.goto(BASE_URL);
     
-    const groomImg = page.locator('img[src*="신랑사진"]');
-    const brideImg = page.locator('img[src*="신부사진"]');
+    const groomImg = page.locator('img[src*="groom"]');
+    const brideImg = page.locator('img[src*="bride"]');
     
     const groomBox = await groomImg.boundingBox();
     const brideBox = await brideImg.boundingBox();
@@ -48,8 +48,8 @@ test.describe('신랑/신부 영역 검증', () => {
     await page.setViewportSize({ width: 375, height: 812 });
     await page.goto(BASE_URL);
     
-    const groomImg = page.locator('img[src*="신랑사진"]');
-    const brideImg = page.locator('img[src*="신부사진"]');
+    const groomImg = page.locator('img[src*="groom"]');
+    const brideImg = page.locator('img[src*="bride"]');
     
     const groomBox = await groomImg.boundingBox();
     const brideBox = await brideImg.boundingBox();
